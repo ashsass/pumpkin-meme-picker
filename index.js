@@ -1,22 +1,18 @@
 import { catsData } from "./data.js";
 const emotionRadios = document.getElementById('emotion-radios')
 const imageButton = document.getElementById('get-image-btn')
-
-/*
-Challenge:
-1. Set up an eventlistener which calls a new
-   function called "getMatchingCatsArray" when
-   the "Get Image" button is clicked.
-2. getMatchingCatsArray should save the value
-   of the checked radio input to a const and 
-   log out that const.
-*/
+const gifCheckbox = document.getElementById('gifs-only-option')
 
 imageButton.addEventListener('click', getMatchingCatsArray)
 
 function getMatchingCatsArray() {
-    const checkedRadio = document.querySelector('input[type="radio"]:checked')
-    console.log(checkedRadio.value)
+    const isGif = gifCheckbox.checked
+    console.log(isGif)
+
+    if (document.querySelector('input[type="radio"]:checked')) {
+        const checkedRadio = document.querySelector('input[type="radio"]:checked').value
+        console.log(checkedRadio)
+    } 
 }
 
 emotionRadios.addEventListener('change', highlightCheckedOption)
