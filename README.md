@@ -1,5 +1,10 @@
 # co0584088accad98fec74dd34
 
+## Stretch Goals
+- Click outside the modal to close the modal
+- Display more than one cat
+- Refactor the UX
+
 Quick start:
 
 ```
